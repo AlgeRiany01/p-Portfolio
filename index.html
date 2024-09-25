@@ -11,6 +11,12 @@
 
     </head>
     <body class=" overflow-x-hidden">
+        <div class="back">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+
         <header>
             <nav class="bg-[#1A0B2E] text-white">
                 <div class=" container mx-auto flex justify-around p-8  ">
@@ -277,6 +283,22 @@
             src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script>
 AOS.init();
+document.onreadystatechange = function () {
+    var progressBar = document.getElementById('progress-bar');
+
+    if (document.readyState === 'interactive') {
+        progressBar.style.width = '50%'; 
+    } else if (document.readyState === 'complete') {
+        progressBar.style.width = '100%';
+        setTimeout(function () {
+         
+            document.getElementById('progress-bar-container').classList.add('Myhidden') ;
+            document.querySelector('.back').classList.add('Myhidden');
+        }, 500);
+    }
+};
+
+
 </script>
     </body>
 </html>
