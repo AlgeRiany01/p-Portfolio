@@ -1,0 +1,16 @@
+@font-face {
+  font-family: cairo;
+  src: url("../fonts/Cairo-Bold.ttf");
+}
+html,
+body {
+  font-family: cairo !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
